@@ -1,0 +1,170 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flores SVG sobre Webcam</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    #svg-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    svg {
+      width: auto;
+      height: 210px;
+      display: block;
+    }
+
+    .color-part {
+      transition: fill 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Webcam -->
+  <video id="video" autoplay playsinline muted></video>
+
+  <!-- SVG agrupado y escalado al 70% -->
+  <div id="svg-container">
+    <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+      <g transform="scale(0.7)">
+        <!-- Lirio -->
+        <g transform="translate(90, 30)">
+          <polygon class="color-part" points="110,80 200,140 45,140" fill="#CB4CED"/> <!---tallo-->
+          <polygon class="color-part" points="220,121 140,110 130,110 180,70" fill="#9C2D5F"/> <!--interior-->
+          <polygon class="color-part" points="20,20 160,50 170,70 150,100 110,103" fill="#F04693"/> <!--petalo 1-->
+          <polygon class="color-part" points="20,20 70,40 120,70 150,100 110,103" fill="#ED95F0"/> <!--petalo 1'-->
+          <polygon class="color-part" points="105,234 190,110 150,100 120,100 120,110" fill="#F04693"/> <!--petalo 2-->
+          <polygon class="color-part" points="105,234 160,110 150,100 120,100 120,110" fill="#ED95F0"/> <!--petalo 2'-->
+          <polygon class="color-part" points="180,160 180,220 180,120 210,100 280,230" fill="#ED95F0"/> <!--petalo 3-->
+          <polygon class="color-part" points="180,160 180,200 180,120 170,100 280,230" fill="#F04693"/> <!--petalo 3'-->
+          <polygon class="color-part" points="280,20 220,120 180,85 233,127 165,65" fill="#F04693"/> <!--petalo 4-->
+          <polygon class="color-part" points="280,20 170,120 180,85 233,127 165,65" fill="#ED95F0"/> <!--petalo 4'-->
+          <polygon class="color-part" points="180,75 200,120 220,50" fill="#F04D46"/> <!--estambre-->
+          <polygon class="color-part" points="155,92 140,40 180,70" fill="#F04D46"/> <!--estambre-->
+          <polygon class="color-part" points="200,100 170,110 210,150" fill="#F04D46"/> <!--estambre-->
+          <polygon class="color-part" points="180,101 140,100 140,150" fill="#F04D46"/> <!---estambre-->
+        </g>
+
+        <!-- cerezo -->
+        <g transform="translate(230, 50)">
+          <polygon class="color-part" points="160,40 200,140 100,140 80,100 119,95 140,101 112,80 120,45" fill="#F552A9"/> 
+          <g transform="rotate(70, 200, 137)">
+            <polygon class="color-part" points="160,40 200,140 100,140 80,100 119,95 140,101 112,80 120,45" fill="#F50083"/>
+        </g>
+        <g transform="rotate(142, 200, 137)">
+             <polygon class="color-part" points="160,40 200,140 100,145 80,100 119,95 140,101 112,80 120,45" fill="#E300F5"/>
+         </g>  
+         <g transform="rotate(212, 200, 137)">
+            <polygon class="color-part" points="160,40 200,140 100,140 80,100 119,95 140,101 112,80 120,45" fill="#F56B83"/>
+         </g> 
+         <g transform="rotate(285, 200, 137)">
+            <polygon class="color-part" points="170,40 200,140 100,145 80,100 119,95 140,101 112,80 120,45" fill="#FF4063"/>
+         </g>
+        </g>
+
+
+        <!-- flor mía -->
+        <g transform="translate(450, 20)">
+          <polygon class="color-part" points="160,40 200,140 100,140" fill="#F552A9"/>
+          <polygon class="color-part" points="160,40 100,140 102,30" fill="#F50083"/>
+          <polygon class="color-part" points="160,40 200,140 160,100" fill="#F50033"/>
+          <polygon class="color-part" points="200,30 200,140 160,100" fill="#F59033"/>
+        <g transform="rotate(90, 200, 137)">
+            <polygon class="color-part" points="160,40 200,140 100,140" fill="#F552A9"/>
+            <polygon class="color-part" points="160,40 100,140 102,30" fill="#F50083"/>
+            <polygon class="color-part" points="160,40 200,140 160,100" fill="#F50033"/>
+            <polygon class="color-part" points="200,30 200,140 160,100" fill="#F59033"/>
+        </g>  
+        <g transform="rotate(182, 200, 137)">
+            <polygon class="color-part" points="160,40 200,140 100,140" fill="#F552A9"/>
+            <polygon class="color-part" points="160,40 100,140 102,30" fill="#F50083"/>
+            <polygon class="color-part" points="160,40 200,140 160,100" fill="#F50033"/>
+            <polygon class="color-part" points="200,30 200,140 160,100" fill="#F59033"/>
+         </g>  
+         <g transform="rotate(272, 200, 137)">
+           <polygon class="color-part" points="160,40 200,140 100,140" fill="#F552A9"/>
+           <polygon class="color-part" points="160,40 100,140 102,30" fill="#F50083"/>
+           <polygon class="color-part" points="160,40 200,140 160,100" fill="#F50033"/>
+           <polygon class="color-part" points="200,30 200,140 160,100" fill="#F59033"/>
+         </g>
+        </g>
+
+         <!-- cardo mío -->
+        <g transform="translate(410, 220)">
+          <polygon points="49,110 40,60 -10,100 -10,30 40,40" fill="blue" transform="rotate(60, 40, 90) scale(1.5) translate(60,-80)"/>
+          <polygon class="color-part" points="90-10 110,90 200,40" fill="#F50083"/>
+          <polygon class="color-part" points="100,100 110,70 200,130" fill="#F50033"/>
+          <polygon class="color-part" points="100,100 120,150 200,130" fill="#9b0A33"/> 
+        <g transform="rotate(-75, 230, 130)">
+          <polygon points="49,110 40,60 -10,100 -10,30 40,40" fill="blue" transform="rotate(60, 40, 90) scale(1.5) translate(60,-80)"/>
+          <polygon class="color-part" points="90-10 110,90 200,40" fill="#F50083"/>
+          <polygon class="color-part" points="100,100 110,70 200,130" fill="#F50033"/>
+          <polygon class="color-part" points="100,100 120,150 200,130" fill="#9b0A33"/> 
+        </g>
+        <g transform="rotate(70, 220, 155)">
+          <polygon points="49,110 40,60 -10,100 -10,30 50,40" fill="blue" transform="rotate(60, 40, 90) scale(1.5) translate(60,-80)"/>
+          <polygon class="color-part" points="90-10 110,90 200,40" fill="#F50083"/>
+          <polygon class="color-part" points="100,100 110,70 200,130" fill="#F50033"/>
+          <polygon class="color-part" points="100,100 120,150 200,130" fill="#9b0A33"/> 
+        </g>
+        <g transform="rotate(190, 220, 124)">
+          <polygon points="49,110 50,60 -10,100 -30,20 50,40" fill="blue" transform="rotate(60, 40, 90) scale(1.5) translate(60,-80)"/>
+          <polygon class="color-part" points="60-10 110,90 210,04" fill="#F50083"/>
+          <polygon class="color-part" points="100,100 110,70 200,130" fill="#F50033"/>
+          <polygon class="color-part" points="100,100 120,175 200,130" fill="#9b0A33"/> 
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <script>
+    // Activar la cámara
+    const video = document.getElementById('video');
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      .then(stream => video.srcObject = stream)
+      .catch(() => alert("Debes permitir el acceso a la cámara."));
+
+    // Color aleatorio
+    function getRandomColor() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    }
+
+    // Cambiar colores cada segundo
+    setInterval(() => {
+      document.querySelectorAll('.color-part').forEach(poly => {
+        poly.setAttribute('fill', getRandomColor());
+      });
+    }, 1000);
+  </script>
+
+</body>
+</html>
+
